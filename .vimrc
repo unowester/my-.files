@@ -1,4 +1,7 @@
-" show ruler
+" reload .vimrc when updated
+autocmd! BufWritePost, FileWritePost .vimrc source %
+
+"show ruler
 set ruler
 
 " use autoindentation
@@ -54,10 +57,11 @@ set visualbell
 
 " syntax highlight for twig
 autocmd BufNewFile,BufRead *.twig setlocal ft=htmldjango
-autocmd BufNewFile,BugRead *.less setlocal ft=css
+" syntax highlight for less
+autocmd BufNewFile,BufRead *.less setlocal ft=css
 
 " shift-key retardedness helper commands
-command Qa :qa
-command Wq :wq
-command Q :q
-command W :w
+command! Qa :qa
+command! Wq :wq
+command! Q :q
+command! W :w
