@@ -65,3 +65,6 @@ command! Qa :qa
 command! Wq :wq
 command! Q :q
 command! W :w
+
+" folding
+set foldmethod=syntax
