@@ -1,5 +1,13 @@
+" use project specific .vimrc
+set exrc
+" don't execute danger stuff
+set secure
+
 " reload .vimrc when updated
 autocmd! BufWritePost, FileWritePost .vimrc source %
+
+" pathogen magic
+call pathogen#infect()
 
 "show ruler
 set ruler
@@ -54,6 +62,11 @@ set incsearch
 
 " stop beeping and make is visual
 set visualbell
+
+" open buffers list with and select by number
+nnoremap <F5> :buffers<CR>:buffer<Space>
+
+set wildchar=<Tab> wildmenu wildmode=full
 
 " syntax highlight for twig
 autocmd BufNewFile,BufRead *.twig setlocal ft=htmldjango

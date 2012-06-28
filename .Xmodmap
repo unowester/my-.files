@@ -1,0 +1,11 @@
+!
+! Use lt/gt for both buttons, on my MacBook Pro it works as expected as default but not with my Slim Aluminium Keyboard,
+!
+keycode 49 = less greater less greater bar brokenbar bar
+keycode 94 = less greater less greater bar brokenbar bar
+
+!
+! use this to get the correct layout for the Slim Aluminium Keyboard
+!
+!keycode 49 = dead_circumflex degree dead_circumflex degree U2032 U2033 U2032
+!keycode 94 = less greater less greater bar brokenbar bar
