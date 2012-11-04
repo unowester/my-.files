@@ -1,0 +1,32 @@
+set -g default-terminal "screen-256color"
+
+# use screen binding for the prefix
+set -g status-right '#[fg=red]#()'
+unbind C-b
+set -g prefix C-a
+
+# switch " over to selecting windows
+#unbind '"'
+#bind-key '"' choose-window
+
+# use ' to switch between sessions
+#bind-key "'" choose-session
+
+# monitor activity
+setw -g monitor-activity on
+set -g visual-activity off
+
+
+# Auto rename window title
+setw -g automatic-rename
+
+bind r source-file ~/.tmux-conf
+
+bind < resize-pane -L 2
+bind > resize-pane -R 2
+bind - resize-pane -D 2
+bind + resize-pane -U 2
+
+set status-interval 30
+
+set -g status-right '#[fg=black]#(curl http://frukt.at/ip.php) '
